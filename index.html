@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<body>
+    
+    <script>
+        // Đối tượng lưu trữ các mảng âm thanh cho 6 hình ảnh
+        var audioData = {
+          1: ['https://webstatic.mihoyo.com/upload/op-public/2021/12/26/056844683ca23dbe3b58cab410ef9be0_757044844048201450.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/c77a84005d45c9544b1580bc64901bd2_5200032578571916449.mp3'],
+          2: ['https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473283016.mp3', 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473621389.mp3', 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473997800.mp3'],
+          3: ['https://webstatic.mihoyo.com/upload/op-public/2020/11/25/f5ebdc3aa2852da587147600ddf6fa57_6096579464354887122.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2020/11/25/3a443d837b1c5437f0804fa33bc3d529_890241425180613694.mp3','https://webstatic.mihoyo.com/upload/op-public/2020/11/25/9cd02801fe0e3ec1abf119a79706772d_7524271030234915679.mp3'],
+          4: ['https://webstatic.mihoyo.com/upload/op-public/2021/06/22/b08b2fb2429cfc5e7c4ecbe799cd91af_3455995324286761439.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/06/22/23f47b3bad600b20f0a7c63344413f9f_1060755609112878729.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/06/22/ff8839ca9a215cba697bb6c83ed326e7_4832914189475967608.mp3'],
+          5: ['https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/5e408235063f7f7aebbe6772d2384922_3132900725248142408.mp3', 'https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/dcd72f90631bea0ba203eca757bfee26_5707206385656052620.mp3','https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/d4b672edb91e9a1d9cd9f5792cf446a0_15710765847442250.mp3'],
+          6: ['https://webstatic.mihoyo.com/upload/op-public/2021/12/26/0792b6c0c8bdcb2ac3aaa6a76e7cad77_2530009843015331227.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/78730d94fca99170f3130fbe98ecd0d4_2278858340028903353.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/74806a55052e2a4507e666d66039ca73_6140399396953337977.mp3']
+        };
+      
+        // Đối tượng theo dõi chỉ số hiện tại cho mỗi hình ảnh
+        var currentIndex = {
+          1: 0,
+          2: 0,
+          3: 0,
+          4: 0,
+          5: 0,
+          6: 0
+        };
+      
+        function playNextAudio(imageId) {
+          var audio = document.getElementById("myAudio");
+      
+          // Lấy mảng âm thanh cho hình ảnh cụ thể
+          var audioSources = audioData[imageId];
+      
+          // Gán đường dẫn của file âm thanh hiện tại
+          audio.src = audioSources[currentIndex[imageId]];
+      
+          // Phát âm thanh
+          audio.play();
+      
+          // Tăng chỉ số, nếu đến cuối mảng thì quay lại file đầu tiên
+          currentIndex[imageId] = (currentIndex[imageId] + 1) % audioSources.length;
+        }
+   
+      </script>
+
+     
+      
+      
+      
+    <div id="main">
+        <div id="header">
+            <!-- Begin NAV-->
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Band</a></li>
+                <li><a href="">Tour</a></li>
+                <li><a href="">Contact</a></li>
+                <li>
+                    <a href="">
+                        More
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Merchandise</a></li>
+                        <li><a href="">Extras</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--End NAV-->
+
+            <!--Begin Search BTN-->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!--End Search BTN-->
+        </div>
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">NEW YORK</h2>
+                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-section">
+                <h2 class="section-heading">THE BAND</h2>
+                <p class="section-subheading">We love music</p>
+                <p class="about-text">
+                    Welcome to Chapter of the New Era, where we celebrate the talented musicians of the Genshin Impact universe! Our fictional band takes inspiration from the vibrant world of Teyvat, blending captivating melodies with dynamic storytelling. Each band member brings their unique flair and musical style, reflecting the rich diversity of Genshin’s beloved characters. From epic anthems to soulful ballads, we strive to capture the essence of adventure and camaraderie. Whether you're a devoted traveler or a music enthusiast, join us on this creative journey, where the spirit of Genshin meets the magic of music!
+                </p>
+                <iframe class="video" width="800" height="498" src="https://www.youtube.com/embed/3NbIcIJU2co" title="Genshin Concert 2022 All Character Themes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <div class="member-lists">
+                    <div class="member-items">
+                            <audio id="myAudio"></audio>
+                            <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-anniversary-yun-jin.webp" alt="Yunjin" class="member-avatar" onclick="playNextAudio(1)">
+                        <p class="member-name">Drummer, Yun Jin</p>
+                    </div>
+                    <div class="member-items">
+                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-melodies-endless-journey-barbara-2022.webp" alt="Barbara" class="member-avatar" onclick="playNextAudio(2)">
+                        <p class="member-name">Vocalist, Barbara</p>
+                    </div>
+                    <div class="member-items">
+                        <img src="https://genshin.global/wp-content/uploads/2022/09/xinyan-genshin-concert-2022-endless-journey.webp" alt="Xinyan" class="member-avatar" onclick="playNextAudio(3)">
+                        <p class="member-name">Bassist, Xinyan</p>
+                    </div>
+                    <div class="member-items">
+                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-melodies-endless-journey-kazuha.webp" alt="Kazuha" class="member-avatar" onclick="playNextAudio(4)">
+                        <p class="member-name">Guitarist, Kaedahara Kazuha</p>
+                    </div>
+                    <div class="member-items">
+                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-anniversary-concert-yae-miko-2022-768x321.webp" alt="Yae Miko" class="member-avatar" onclick="playNextAudio(5)">
+                        <p class="member-name">Flutist, Yae Miko</p>
+                    </div>
+                    <div class="member-items">
+                        <img src="https://genshin.global/wp-content/uploads/2022/09/shenhe-genshin-concert-2022-endless-journey-768x321.webp" alt="Shenhe" class="member-avatar" onclick="playNextAudio(6)">
+                        <p class="member-name">Keyboardist, Shenhe</p>
+                    </div>
+                  
+                </div>
+            </div>
+            
+            <div class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <p class="section-subheading text-white">Remember to book your tickets!</p>
+
+                    <ul class="ticket-list">
+                        <li>September <span class="sold-out">Sold out</span> </li>
+                        <li>October <span class="sold-out">Sold out</span> </li>
+                        <li>November <span class="quantity">3</span> </li>
+                    </ul>
+                    
+
+                    <div class="place-list">
+                        <div class="place-item">
+                            <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="newyork" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Enjoy Genshin Impact’s melodies at the iconic Carnegie Hall in New York City.</p>
+                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button> 
+                            </div>
+                        </div>
+                        <div class="place-item">
+                            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Paris</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">Experience Genshin's music at the stunning Palais Garnier, a symbol of Parisian elegance.</p>
+                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button> 
+                            </div>
+                        </div>
+                        <div class="place-item">
+                            <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="sanfran" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">San Francisco</h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-desc">Join us at Davies Symphony Hall for an unforgettable Genshin concert in San Francisco.</p>
+                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button> 
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div> 
+            </div>
+
+
+
+            <div class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-subheading">Fan? Drop a note!</p>
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+    </div>
+   
+    <div class="model js-model">
+        <div class="model-container js-model-container">
+            <div class="model-close js-model-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="model-header">
+                <img class= "model-header-icon" src="https://gamelade.vn/wp-content/uploads/2024/02/hsrgiweaponarticlefeaturedimage-1-1-2048x1024.png" alt="">
+                <i class="ti-bag">Tickets</i>
+            </header>
+            <div class="model-body">
+                <label for="" class="model-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input type="text" class="model-input" placeholder="How many?">
+                <label for="" class="model-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input type="text" class="model-input" placeholder="Enter email...">
+
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+
+            <footer class="model-footer">
+                <p class="model-help">Need <a href="">Help?</a></p>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const model =document.querySelector('.js-model')
+        const modelContainer = document.querySelector('.js-model-container')
+        const modelClose = document.querySelector('.js-model-close')
+
+
+        function showBuyTickets () {
+            //alert("Show")
+            model.classList.add('open');
+        }
+
+        function hideBuyTickets () {
+            //alert("Show")
+            model.classList.remove('open');
+        }
+        
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets);
+        }
+        
+        modelClose.addEventListener('click',hideBuyTickets);
+        model.addEventListener('click',hideBuyTickets);
+        modelContainer.addEventListener('click',function (event) {
+            event.stopPropagation()
+        })
+      </script>
+</body>
+</html>
