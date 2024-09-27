@@ -1,450 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Genshin Band Concert</title>
-    <link rel="icon" href="favicon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
-</head>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+      sizes="64x64"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons-font/themify-icons/themify-icons.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <script>
-        // Đối tượng lưu trữ các mảng âm thanh cho 6 hình ảnh
-        var audioData = {
-            1: ['https://webstatic.mihoyo.com/upload/op-public/2021/12/26/056844683ca23dbe3b58cab410ef9be0_757044844048201450.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/c77a84005d45c9544b1580bc64901bd2_5200032578571916449.mp3'],
-            2: ['https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473283016.mp3', 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473621389.mp3', 'https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473997800.mp3'],
-            3: ['https://webstatic.mihoyo.com/upload/op-public/2020/11/25/f5ebdc3aa2852da587147600ddf6fa57_6096579464354887122.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2020/11/25/3a443d837b1c5437f0804fa33bc3d529_890241425180613694.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2020/11/25/9cd02801fe0e3ec1abf119a79706772d_7524271030234915679.mp3'],
-            4: ['https://webstatic.mihoyo.com/upload/op-public/2021/06/22/b08b2fb2429cfc5e7c4ecbe799cd91af_3455995324286761439.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/06/22/23f47b3bad600b20f0a7c63344413f9f_1060755609112878729.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/06/22/ff8839ca9a215cba697bb6c83ed326e7_4832914189475967608.mp3'],
-            5: ['https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/5e408235063f7f7aebbe6772d2384922_3132900725248142408.mp3', 'https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/dcd72f90631bea0ba203eca757bfee26_5707206385656052620.mp3', 'https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/d4b672edb91e9a1d9cd9f5792cf446a0_15710765847442250.mp3'],
-            6: ['https://webstatic.mihoyo.com/upload/op-public/2021/12/26/0792b6c0c8bdcb2ac3aaa6a76e7cad77_2530009843015331227.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/78730d94fca99170f3130fbe98ecd0d4_2278858340028903353.mp3', 'https://webstatic.mihoyo.com/upload/op-public/2021/12/26/74806a55052e2a4507e666d66039ca73_6140399396953337977.mp3']
-        };
+      // Đối tượng lưu trữ các mảng âm thanh cho 6 hình ảnh
+      var audioData = {
+        1: [
+          "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/056844683ca23dbe3b58cab410ef9be0_757044844048201450.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/c77a84005d45c9544b1580bc64901bd2_5200032578571916449.mp3",
+        ],
+        2: [
+          "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473283016.mp3",
+          "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473621389.mp3",
+          "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20191009/2019100914473997800.mp3",
+        ],
+        3: [
+          "https://webstatic.mihoyo.com/upload/op-public/2020/11/25/f5ebdc3aa2852da587147600ddf6fa57_6096579464354887122.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2020/11/25/3a443d837b1c5437f0804fa33bc3d529_890241425180613694.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2020/11/25/9cd02801fe0e3ec1abf119a79706772d_7524271030234915679.mp3",
+        ],
+        4: [
+          "https://webstatic.mihoyo.com/upload/op-public/2021/06/22/b08b2fb2429cfc5e7c4ecbe799cd91af_3455995324286761439.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2021/06/22/23f47b3bad600b20f0a7c63344413f9f_1060755609112878729.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2021/06/22/ff8839ca9a215cba697bb6c83ed326e7_4832914189475967608.mp3",
+        ],
+        5: [
+          "https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/5e408235063f7f7aebbe6772d2384922_3132900725248142408.mp3",
+          "https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/dcd72f90631bea0ba203eca757bfee26_5707206385656052620.mp3",
+          "https://webstatic.hoyoverse.com/upload/contentweb/2022/02/09/d4b672edb91e9a1d9cd9f5792cf446a0_15710765847442250.mp3",
+        ],
+        6: [
+          "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/0792b6c0c8bdcb2ac3aaa6a76e7cad77_2530009843015331227.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/78730d94fca99170f3130fbe98ecd0d4_2278858340028903353.mp3",
+          "https://webstatic.mihoyo.com/upload/op-public/2021/12/26/74806a55052e2a4507e666d66039ca73_6140399396953337977.mp3",
+        ],
+      };
 
-        // Đối tượng theo dõi chỉ số hiện tại cho mỗi hình ảnh
-        var currentIndex = {
-            1: 0,
-            2: 0,
-            3: 0,
-            4: 0,
-            5: 0,
-            6: 0
-        };
+      // Đối tượng theo dõi chỉ số hiện tại cho mỗi hình ảnh
+      var currentIndex = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 0,
+      };
 
-        function playNextAudio(imageId) {
-            var audio = document.getElementById("myAudio");
+      function playNextAudio(imageId) {
+        var audio = document.getElementById("myAudio");
 
-            // Lấy mảng âm thanh cho hình ảnh cụ thể
-            var audioSources = audioData[imageId];
+        // Lấy mảng âm thanh cho hình ảnh cụ thể
+        var audioSources = audioData[imageId];
 
-            // Gán đường dẫn của file âm thanh hiện tại
-            audio.src = audioSources[currentIndex[imageId]];
+        // Gán đường dẫn của file âm thanh hiện tại
+        audio.src = audioSources[currentIndex[imageId]];
 
-            // Phát âm thanh
-            audio.play();
+        // Phát âm thanh
+        audio.play();
 
-            // Tăng chỉ số, nếu đến cuối mảng thì quay lại file đầu tiên
-            currentIndex[imageId] = (currentIndex[imageId] + 1) % audioSources.length;
-        }
+        // Tăng chỉ số, nếu đến cuối mảng thì quay lại file đầu tiên
+        currentIndex[imageId] =
+          (currentIndex[imageId] + 1) % audioSources.length;
+      }
     </script>
 
-
-
-
+    <!--Phần "Extras":
+Fan Art: Bộ sưu tập các tác phẩm nghệ thuật của cộng đồng về các nhân vật trong Genshin Impact.
+Cosplay: Hình ảnh hoặc video về cosplay các nhân vật trong trò chơi, có thể kèm theo hướng dẫn.
+Trivia: Những thông tin thú vị, ít người biết về trò chơi, các nhân vật hoặc nhà phát triển.
+Mini-Games: Liên kết hoặc nhúng các trò chơi nhỏ hoặc quiz liên quan đến Genshin Impact.
+Easter Eggs: Danh sách các chi tiết ẩn thú vị trong trò chơi mà người chơi có thể không chú ý.
+Phần "Media":
+Music: Bộ sưu tập các bản nhạc nền trong trò chơi hoặc nhạc remix do cộng đồng sáng tạo.
+Video Highlights: Các video nổi bật, trailer chính thức của game, hoặc các cảnh chơi đặc biệt từ band của bạn.
+Livestreams: Lịch hoặc liên kết tới các buổi livestream về Genshin Impact.
+Gallery: Bộ sưu tập ảnh về các sự kiện trong game, screenshot đẹp, hoặc artwork chính thức từ nhà phát triển.
+Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà người hâm mộ có thể tải về.-->
 
     <div id="main">
-        <div id="header">
-            <!-- Begin NAV-->
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#band">Band</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <a href="">
-                        More
-                        <i class="nav-arrow-down ti-angle-down"></i>
-                    </a>
-                    <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
-                    </ul>
-                </li>
+      <div id="header">
+        <!-- Begin NAV-->
+        <ul id="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="">
+              More
+              <i class="nav-arrow-down ti-angle-down"></i>
+            </a>
+            <ul class="subnav">
+              <li><a href="#merchandise">Merchandise</a></li>
+              <li><a href="">Extras</a></li>
+              <li><a href="">Media</a></li>
             </ul>
-            <!--End NAV-->
+          </li>
+        </ul>
+        <!--End NAV-->
 
-            <!--Begin Search BTN-->
-            <div class="search-btn js-search-btn">
-                <i class="search-icon ti-search"></i>
-            </div>
-            <div class="search-container js-search-container">
-                <div class="search js-search-form">
-                    <!--CHECK LẠI chỗ này-->
-                    <div class="js-search-close"></div>
-                    <form class="form">
-                        <button>
-                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                        <input class="input" placeholder="Type your text" required="" type="text">
-                        <button class="reset" type="reset">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                    </form>
-                </div>
-
-            </div>
-
-
-            <!--End Search BTN-->
+        <!--Begin Search BTN-->
+        <div class="search-btn js-search-btn">
+          <i class="search-icon ti-search"></i>
         </div>
-        <div id="slider">
-            <!-- <div class="text-content">
-                <h2 class="text-heading">NEW YORK</h2>
-                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
-            </div> -->
+        <div class="search-container js-search-container">
+          <div class="search js-search-form">
+            <!--CHECK LẠI chỗ này-->
+            <div class="js-search-close"></div>
+            <form class="form">
+              <button>
+                <svg
+                  width="17"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-labelledby="search"
+                >
+                  <path
+                    d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                    stroke="currentColor"
+                    stroke-width="1.333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                class="input"
+                placeholder="Type your text"
+                required=""
+                type="text"
+              />
+              <button class="reset" type="reset">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
-        <div id="content">
-            <div id="band" class="content-section">
-                <h2 class="section-heading">THE BAND</h2>
-                <p class="section-subheading">We love music</p>
-                <p class="about-text">
-                    Welcome to Chapter of the New Era, where we celebrate the talented musicians of the Genshin Impact universe! Our fictional band takes inspiration from the vibrant world of Teyvat, blending captivating melodies with dynamic storytelling. Each band member
-                    brings their unique flair and musical style, reflecting the rich diversity of Genshin’s beloved characters. From epic anthems to soulful ballads, we strive to capture the essence of adventure and camaraderie. Whether you're a devoted
-                    traveler or a music enthusiast, join us on this creative journey, where the spirit of Genshin meets the magic of music!
-                </p>
-                <iframe class="video" width="800" height="498" src="https://www.youtube.com/embed/3NbIcIJU2co" title="Genshin Concert 2022 All Character Themes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                <div class="member-lists">
-                    <div class="member-items">
-                        <audio id="myAudio"></audio>
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-anniversary-yun-jin.webp" alt="Yunjin" class="member-avatar" onclick="playNextAudio(1)">
-                        <p class="member-name">Drummer, Yun Jin</p>
-                    </div>
-                    <div class="member-items">
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-melodies-endless-journey-barbara-2022.webp" alt="Barbara" class="member-avatar" onclick="playNextAudio(2)">
-                        <p class="member-name">Vocalist, Barbara</p>
-                    </div>
-                    <div class="member-items">
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/xinyan-genshin-concert-2022-endless-journey.webp" alt="Xinyan" class="member-avatar" onclick="playNextAudio(3)">
-                        <p class="member-name">Bassist, Xinyan</p>
-                    </div>
-                    <div class="member-items">
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-melodies-endless-journey-kazuha.webp" alt="Kazuha" class="member-avatar" onclick="playNextAudio(4)">
-                        <p class="member-name">Guitarist, Kaedahara Kazuha</p>
-                    </div>
-                    <div class="member-items">
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/genshin-anniversary-concert-yae-miko-2022-768x321.webp" alt="Yae Miko" class="member-avatar" onclick="playNextAudio(5)">
-                        <p class="member-name">Flutist, Yae Miko</p>
-                    </div>
-                    <div class="member-items">
-                        <img src="https://genshin.global/wp-content/uploads/2022/09/shenhe-genshin-concert-2022-endless-journey-768x321.webp" alt="Shenhe" class="member-avatar" onclick="playNextAudio(6)">
-                        <p class="member-name">Keyboardist, Shenhe</p>
-                    </div>
+        <!--End Search BTN-->
+      </div>
+      <div id="slider"></div>
+      <div id="content">
+        <div id="band" class="content-section">
+          <h2 class="section-heading">THE BAND</h2>
+          <p class="section-subheading">We love music</p>
+          <p class="about-text">
+            Welcome to Chapter of the New Era, where we celebrate the talented
+            musicians of the Genshin Impact universe! Our fictional band takes
+            inspiration from the vibrant world of Teyvat, blending captivating
+            melodies with dynamic storytelling. Each band member brings their
+            unique flair and musical style, reflecting the rich diversity of
+            Genshin’s beloved characters. From epic anthems to soulful ballads,
+            we strive to capture the essence of adventure and camaraderie.
+            Whether you're a devoted traveler or a music enthusiast, join us on
+            this creative journey, where the spirit of Genshin meets the magic
+            of music!
+          </p>
+          <iframe
+            class="video"
+            width="800"
+            height="498"
+            src="https://www.youtube.com/embed/3NbIcIJU2co"
+            title="Genshin Concert 2022 All Character Themes"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
 
-                </div>
+          <div class="member-lists">
+            <div class="member-items">
+              <audio id="myAudio"></audio>
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-anniversary-yun-jin.webp"
+                alt="Yunjin"
+                class="member-avatar"
+                onclick="playNextAudio(1)"
+              />
+              <p class="member-name">Drummer, Yun Jin</p>
             </div>
-
-            <div id="tour" class="tour-section">
-                <div class="content-section">
-                    <h2 class="section-heading text-white">TOUR DATES</h2>
-                    <p class="section-subheading text-white">Remember to book your tickets!</p>
-
-                    <ul class="ticket-list">
-                        <li>September <span class="sold-out">Sold out</span> </li>
-                        <li>October <span class="sold-out">Sold out</span> </li>
-                        <li>November <span class="quantity">3</span> </li>
-                    </ul>
-
-
-                    <div class=" row place-list">
-                        <div class="col col-third">
-                            <img src="./assets/img/Mondstadt.png" alt="Mondstadt" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Mondstadt</h3>
-                                <p class="place-time">Mon 25 Nov 2019</p>
-                                <p class="place-desc">Enjoy Genshin Impact’s melodies at the iconic Carnegie Hall in New York City.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="col col-third">
-                            <img src="./assets/img/Liyue.png" alt="Liyue" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Liyue</h3>
-                                <p class="place-time">Sat 28 Nov 2020</p>
-                                <p class="place-desc">Experience Genshin's music at the stunning Palais Garnier, a symbol of Parisian elegance.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="col col-third">
-                            <img src="./assets/img/Inazuma.png" alt="Inazuma" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Inazuma</h3>
-                                <p class="place-time">Fri 26 Nov 2021</p>
-                                <p class="place-desc">Join us at Davies Symphony Hall for an unforgettable Genshin concert in San Francisco.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="col col-third">
-                            <img src="./assets/img/Sumeru.png" alt="Sumeru" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Sumeru</h3>
-                                <p class="place-time">Thu 24 Nov 2022</p>
-                                <p class="place-desc">Enjoy Genshin Impact’s melodies at the iconic Carnegie Hall in New York City.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="col col-third">
-                            <img src="./assets/img/Fontaine.png" alt="Fontaine" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Fontaine</h3>
-                                <p class="place-time">Wed 29 Nov 2023</p>
-                                <p class="place-desc">Experience Genshin's music at the stunning Palais Garnier, a symbol of Parisian elegance.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="col col-third">
-                            <img src="./assets/img/Natlan.png" alt="Natlan" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">Natlan</h3>
-                                <p class="place-time">Tue 26 Nov 2024</p>
-                                <p class="place-desc">Join us at Davies Symphony Hall for an unforgettable Genshin concert in San Francisco.</p>
-                                <button class="place-buy-button js-buy-ticket">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="clear"></div>
-                    </div>
-                </div>
+            <div class="member-items">
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-melodies-endless-journey-barbara-2022.webp"
+                alt="Barbara"
+                class="member-avatar"
+                onclick="playNextAudio(2)"
+              />
+              <p class="member-name">Vocalist, Barbara</p>
             </div>
+            <div class="member-items">
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/xinyan-genshin-concert-2022-endless-journey.webp"
+                alt="Xinyan"
+                class="member-avatar"
+                onclick="playNextAudio(3)"
+              />
+              <p class="member-name">Bassist, Xinyan</p>
+            </div>
+            <div class="member-items">
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/genshin-concert-2022-melodies-endless-journey-kazuha.webp"
+                alt="Kazuha"
+                class="member-avatar"
+                onclick="playNextAudio(4)"
+              />
+              <p class="member-name">Guitarist, Kaedahara Kazuha</p>
+            </div>
+            <div class="member-items">
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/genshin-anniversary-concert-yae-miko-2022-768x321.webp"
+                alt="Yae Miko"
+                class="member-avatar"
+                onclick="playNextAudio(5)"
+              />
+              <p class="member-name">Flutist, Yae Miko</p>
+            </div>
+            <div class="member-items">
+              <img
+                src="https://genshin.global/wp-content/uploads/2022/09/shenhe-genshin-concert-2022-endless-journey-768x321.webp"
+                alt="Shenhe"
+                class="member-avatar"
+                onclick="playNextAudio(6)"
+              />
+              <p class="member-name">Keyboardist, Shenhe</p>
+            </div>
+          </div>
+        </div>
 
-            <div id="contact" class="content-section">
-                <h2 class="section-heading">CONTACT</h2>
-                <p class="section-subheading">Fan? Drop a note!</p>
+        <div id="tour" class="tour-section">
+          <div class="content-section">
+            <h2 class="section-heading text-white">TOUR DATES</h2>
+            <p class="section-subheading text-white">
+              Remember to book your tickets!
+            </p>
 
+            <ul class="ticket-list">
+              <li>September <span class="sold-out">Sold out</span></li>
+              <li>October <span class="sold-out">Sold out</span></li>
+              <li>November <span class="quantity">3</span></li>
+            </ul>
+
+            <div class="row place-list">
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Mondstadt.png"
+                  alt="Mondstadt"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Mondstadt</h3>
+                  <p class="place-time">Mon 25 Nov 2019</p>
+                  <p class="place-desc">
+                    Enjoy Genshin Impact’s melodies at the iconic Carnegie Hall
+                    in New York City.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Liyue.png"
+                  alt="Liyue"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Liyue</h3>
+                  <p class="place-time">Sat 28 Nov 2020</p>
+                  <p class="place-desc">
+                    Experience Genshin's music at the stunning Palais Garnier, a
+                    symbol of Parisian elegance.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Inazuma.png"
+                  alt="Inazuma"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Inazuma</h3>
+                  <p class="place-time">Fri 26 Nov 2021</p>
+                  <p class="place-desc">
+                    Join us at Davies Symphony Hall for an unforgettable Genshin
+                    concert in San Francisco.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Sumeru.png"
+                  alt="Sumeru"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Sumeru</h3>
+                  <p class="place-time">Thu 24 Nov 2022</p>
+                  <p class="place-desc">
+                    Enjoy Genshin Impact’s melodies at the iconic Carnegie Hall
+                    in New York City.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Fontaine.png"
+                  alt="Fontaine"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Fontaine</h3>
+                  <p class="place-time">Wed 29 Nov 2023</p>
+                  <p class="place-desc">
+                    Experience Genshin's music at the stunning Palais Garnier, a
+                    symbol of Parisian elegance.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="col col-third">
+                <img
+                  src="./assets/img/Natlan.png"
+                  alt="Natlan"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <h3 class="place-heading">Natlan</h3>
+                  <p class="place-time">Tue 26 Nov 2024</p>
+                  <p class="place-desc">
+                    Join us at Davies Symphony Hall for an unforgettable Genshin
+                    concert in San Francisco.
+                  </p>
+                  <button class="place-buy-button js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact" class="content-section">
+          <h2 class="section-heading">CONTACT</h2>
+          <p class="section-subheading">Fan? Drop a note!</p>
+
+          <div class="row">
+            <div class="col col-haft contact-content">
+              <p>
+                <i class="ti-location-pin"></i>Tan Phu, Ho Chi Minh, Vietnam
+              </p>
+              <p><i class="ti-mobile"></i>Phone: (+84)853251400</p>
+              <p>
+                <i class="ti-location-pin"></i>Email: duyet.cao1203@hcmut.edu.vn
+              </p>
+            </div>
+            <div class="form-content col col-half">
+              <form action="">
                 <div class="row">
-                    <div class="col col-haft contact-content">
-                        <p><i class="ti-location-pin"></i>Tan Phu, Ho Chi Minh, Vietnam</p>
-                        <p><i class="ti-mobile"></i>Phone: (+84)853251400 </p>
-                        <p><i class="ti-location-pin"></i>Email: duyet.cao1203@hcmut.edu.vn</p>
-                    </div>
-                    <div class="form-content col col-half">
-                        <form action="">
-                            <div class="row">
-                                <div class="col col-half">
-                                    <input type="text" placeholder="Name" required id="" class="form-control">
-                                </div>
-                                <div class="col col-half">
-                                    <input type="email" placeholder="Email" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col col-full">
-                                    <input type="text" placeholder="Message" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <input class="contact-button" type="submit" value="SEND">
-                        </form>
-                    </div>
+                  <div class="col col-half">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col col-half">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
                 </div>
-            </div>
-
-            <div class="map-section">
-                <img src="https://cdn.oneesports.gg/cdn-data/2022/09/GenshinImpact_Concert2022_Merchandise-1536x864.jpg" alt="">
-            </div>
-
-            <table class="content-section">
-                <tbody>
-                    <tr>
-                        <td><strong>MERCHANDISE</strong></td>
-                        <td><strong>PRICE</strong></td>
-                    </tr>
-                    <a href="" target="_blank">
-                        <tr class="tr-type1">
-                            <td>Mini harmonica necklace</td>
-                            <td>US$30.50</td>
-                        </tr>
-                    </a>
-                    <a href="" target="_blank">
-                        <tr>
-                            <td>Character mood gift box</td>
-                            <td>US$46</td>
-                        </tr>
-                    </a>
-                    <a href="" target="_blank">
-                        <tr class="tr-type1">
-                            <td>Acrylic ornament</td>
-                            <td>US$15</td>
-                        </tr>
-                    </a>
-                    <a href="" target="_blank">
-                        <tr>
-                            <td>Acrylic hangable</td>
-                            <td>US$7</td>
-                        </tr>
-                    </a>
-                    <a href="" target="_blank">
-                        <tr class="tr-type1">
-                            <td>Series postcard set</td>
-                            <td>US$6</td>
-                        </tr>
-                    </a>
-                    <a href="https://genshin.global/product/genshin-concert-2022-badge/" target="_blank" rel="noopener noreferrer">
-                        <tr>
-                            <td>Tinplate badge</td>
-                            <td>US$3</td>
-                        </tr>
-                    </a>
-                    <a href="" target="_blank">
-                        <tr class="tr-type1">
-                            <td>Commemorative hologram ticket</td>
-                            <td>US$2.50</td>
-                        </tr>
-                    </a>
-                </tbody>
-            </table>
-
-
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------>
-        <div id="footer">
-            <div class="tour-section">
-                <div class="content-section">
-                    <div class="footer-logo">
-                        <a href="https://genshin.hoyoverse.com/en/" target="_blank" rel="noopener noreferrer">
-                            <img class="footer-logo1" src="https://fastcdn.hoyoverse.com/mi18n/resource-trans/upload/event/2023/07/10/5adaf3c356e577f0659899a8f5a2a06a_863358723360619202.png">
-                        </a>
-                        <div class="footer-link">
-                            <a href="https://genshin.hoyoverse.com/en/company/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                            <a href="https://genshin.hoyoverse.com/en/company/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                            <a href="https://www.hoyoverse.com/about-us?utm_source=genshin&amp;utm_medium=footer" target="_blank" rel="noopener noreferrer">About Us</a>
-                            <a href="mailto:genshin_cs@hoyoverse.com" target="_blank" rel="noopener noreferrer">Contact Us</a>
-                            <a href="https://cs.hoyoverse.com/static/hoyoverse-new-csc-service-hall-fe/index.html?page_id=19&amp;login_type=visitor&amp;game_biz=platform_hyvpass&amp;lang=en-us&amp;utm_source=genshin&amp;utm_medium=footer" target="_blank" rel="noopener noreferrer">Help Center</a>
-                        </div>
-                        <img class="footer-logo2" src="https://webstatic.hoyoverse.com/upload/op-public/2023/02/02/6d41c6960e73a2f264132bdbbff60ce3_3994663197512018697.png" href="" style="width:200px;border:none;vertical-align:middle;">
-
-                        <p class="footer-comment">
-                            "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
-                        </p>
-                        <p class="footer-comment">
-                            Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
-                        </p>
-                        <a href="https://www.hoyoverse.com/en-us" target="_blank" rel="noopener noreferrer">
-                            <img class="footer-logo3" src="https://fastcdn.hoyoverse.com/mi18n/resource-trans/upload/event/2021/12/29/eaa64d81ae6a7318a6afb91cbffd83a4_118924438105936743.png">
-                        </a>
-                        <p class="footer-comment2">Copyright © COGNOSPHERE. All Rights Reserved.</p>
-                    </div>
+                <div class="row">
+                  <div class="col col-full">
+                    <input
+                      type="text"
+                      placeholder="Message"
+                      required
+                      id=""
+                      class="form-control"
+                    />
+                  </div>
                 </div>
+                <input class="contact-button" type="submit" value="SEND" />
+              </form>
             </div>
-
+          </div>
         </div>
+
+        <div id="merchandise" class="map-section">
+          <img src="/Genshin_Concert_Band/assets/img/merchandise.jpg" alt="" />
+        </div>
+
+        <table class="content-section">
+          <tbody>
+            <tr>
+              <td><strong>MERCHANDISE</strong></td>
+              <td><strong>PRICE</strong></td>
+            </tr>
+
+            <tr class="tr-type1">
+              <a
+                href="https://www.msn.com/vi-vn/news/national/n%E1%BB%AF-dj-b%C3%A9-vi-tham-gia-%C4%91i%E1%BB%81u-h%C3%A0nh-%C4%91%C6%B0%E1%BB%9Dng-d%C3%A2y-ma-t%C3%BAy-%E1%BB%9F-tphcm/ar-AA1r5AzR?ocid=msedgntp&pc=CNNDDB&cvid=d097e3bcb4844e61b231e3718f63b60f&ei=8"
+                target="_blank"
+              >
+                <td>Mini harmonica necklace</td>
+                <td>US$30.50</td>
+              </a>
+            </tr>
+
+            <a href="" target="_blank">
+              <tr>
+                <td>Character mood gift box</td>
+                <td>US$46</td>
+              </tr>
+            </a>
+            <a href="" target="_blank">
+              <tr class="tr-type1">
+                <td>Acrylic ornament</td>
+                <td>US$15</td>
+              </tr>
+            </a>
+            <a href="" target="_blank">
+              <tr>
+                <td>Acrylic hangable</td>
+                <td>US$7</td>
+              </tr>
+            </a>
+            <a href="" target="_blank">
+              <tr class="tr-type1">
+                <td>Series postcard set</td>
+                <td>US$6</td>
+              </tr>
+            </a>
+            <a
+              href="https://genshin.global/product/genshin-concert-2022-badge/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <tr>
+                <td>Tinplate badge</td>
+                <td>US$3</td>
+              </tr>
+            </a>
+            <a href="" target="_blank">
+              <tr class="tr-type1">
+                <td>Commemorative hologram ticket</td>
+                <td>US$2.50</td>
+              </tr>
+            </a>
+          </tbody>
+        </table>
+      </div>
+      <!------------------------------------------------------------------------------------------------------------------------------------------>
+      <div id="footer">
+        <div class="tour-section">
+          <div class="content-section">
+            <div class="footer-logo">
+              <a
+                href="https://genshin.hoyoverse.com/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="footer-logo1"
+                  src="https://fastcdn.hoyoverse.com/mi18n/resource-trans/upload/event/2023/07/10/5adaf3c356e577f0659899a8f5a2a06a_863358723360619202.png"
+                />
+              </a>
+              <div class="footer-link">
+                <a
+                  href="https://genshin.hoyoverse.com/en/company/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="https://genshin.hoyoverse.com/en/company/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Terms of Service</a
+                >
+                <a
+                  href="https://www.hoyoverse.com/about-us?utm_source=genshin&amp;utm_medium=footer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >About Us</a
+                >
+                <a
+                  href="mailto:genshin_cs@hoyoverse.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Contact Us</a
+                >
+                <a
+                  href="https://cs.hoyoverse.com/static/hoyoverse-new-csc-service-hall-fe/index.html?page_id=19&amp;login_type=visitor&amp;game_biz=platform_hyvpass&amp;lang=en-us&amp;utm_source=genshin&amp;utm_medium=footer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Help Center</a
+                >
+              </div>
+              <img
+                class="footer-logo2"
+                src="https://webstatic.hoyoverse.com/upload/op-public/2023/02/02/6d41c6960e73a2f264132bdbbff60ce3_3994663197512018697.png"
+                href=""
+                style="width: 200px; border: none; vertical-align: middle"
+              />
+
+              <p class="footer-comment">
+                "PlayStation Family Mark," "PS5 logo" and "PS4 logo" are
+                registered trademarks or trademarks of Sony Interactive
+                Entertainment Inc.
+              </p>
+              <p class="footer-comment">
+                Epic, Epic Games, Epic Games Store, the Epic Games Store logo,
+                and Epic Online Services are trademarks and/or registered
+                trademarks of Epic Games. All other trademarks are the property
+                of their respective owners.
+              </p>
+              <a
+                href="https://www.hoyoverse.com/en-us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="footer-logo3"
+                  src="https://fastcdn.hoyoverse.com/mi18n/resource-trans/upload/event/2021/12/29/eaa64d81ae6a7318a6afb91cbffd83a4_118924438105936743.png"
+                />
+              </a>
+              <p class="footer-comment2">
+                Copyright © COGNOSPHERE. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
     <div class="model js-model">
-        <div class="model-container js-model-container">
-            <div class="model-close js-model-close">
-                <i class="ti-close"></i>
-            </div>
-            <header class="model-header">
-                <img class="model-header-icon" src="https://gamelade.vn/wp-content/uploads/2024/02/hsrgiweaponarticlefeaturedimage-1-1-2048x1024.png" alt="">
-                <i class="ti-bag">Tickets</i>
-            </header>
-            <div class="model-body">
-                <form>
-                    <label for="ticket-quantity" class="model-label">
-                        <i class="ti-shopping-cart"></i>
-                        Tickets, $2 per person
-                    </label>
-                    <input required id="ticket-quantity" type="number" class="model-input" placeholder="How many?">
-                    <label for="ticket-email" class="model-label">
-                        <i class="ti-user"></i>
-                        Send to
-                    </label>
-                    <input required id="ticket-email" type="email" class="model-input" placeholder="Enter your email...">
-
-                    <button id="buy-tickets">
-                        Pay
-                        <i class="ti-check"></i>
-                    </button>
-                </form>
-            </div>
-            <footer class="model-footer">
-                <p class="model-help">Need <a class="model-help-child" href="https://www.paypal.com/us/cshelp/personal" target="_blank">Help?</a></p>
-            </footer>
+      <div class="model-container js-model-container">
+        <div class="model-close js-model-close">
+          <i class="ti-close"></i>
         </div>
+        <header class="model-header">
+          <img
+            class="model-header-icon"
+            src="https://gamelade.vn/wp-content/uploads/2024/02/hsrgiweaponarticlefeaturedimage-1-1-2048x1024.png"
+            alt=""
+          />
+          <i class="ti-bag">Tickets</i>
+        </header>
+        <div class="model-body">
+          <form>
+            <label for="ticket-quantity" class="model-label">
+              <i class="ti-shopping-cart"></i>
+              Tickets, $2 per person
+            </label>
+            <input
+              required
+              id="ticket-quantity"
+              type="number"
+              class="model-input"
+              placeholder="How many?"
+            />
+            <label for="ticket-email" class="model-label">
+              <i class="ti-user"></i>
+              Send to
+            </label>
+            <input
+              required
+              id="ticket-email"
+              type="email"
+              class="model-input"
+              placeholder="Enter your email..."
+            />
+
+            <button id="buy-tickets">
+              Pay
+              <i class="ti-check"></i>
+            </button>
+          </form>
+        </div>
+        <footer class="model-footer">
+          <p class="model-help">
+            Need
+            <a
+              class="model-help-child"
+              href="https://www.paypal.com/us/cshelp/personal"
+              target="_blank"
+              >Help?</a
+            >
+          </p>
+        </footer>
+      </div>
     </div>
 
     <!--BUY-->
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const model = document.querySelector('.js-model')
-        const modelContainer = document.querySelector('.js-model-container')
-        const modelClose = document.querySelector('.js-model-close')
+      const buyBtns = document.querySelectorAll(".js-buy-ticket");
+      const model = document.querySelector(".js-model");
+      const modelContainer = document.querySelector(".js-model-container");
+      const modelClose = document.querySelector(".js-model-close");
 
+      function showBuyTickets() {
+        //alert("Show")
+        model.classList.add("open");
+      }
 
-        function showBuyTickets() {
-            //alert("Show")
-            model.classList.add('open');
-        }
+      function hideBuyTickets() {
+        //alert("Show")
+        model.classList.remove("open");
+      }
 
-        function hideBuyTickets() {
-            //alert("Show")
-            model.classList.remove('open');
-        }
+      for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener("click", showBuyTickets);
+      }
 
-        for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets);
-        }
-
-        modelClose.addEventListener('click', hideBuyTickets);
-        model.addEventListener('click', hideBuyTickets);
-        modelContainer.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
+      modelClose.addEventListener("click", hideBuyTickets);
+      model.addEventListener("click", hideBuyTickets);
+      modelContainer.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
     </script>
 
     <!--SEARCH-->
 
     <script>
-        const searchBtns = document.querySelectorAll('.js-search-btn')
-        const search = document.querySelector('.js-search-form')
-        const searchContainer = document.querySelector('.js-search-container')
-        const searchClose = document.querySelector('.js-search-close')
+      const searchBtns = document.querySelectorAll(".js-search-btn");
+      const search = document.querySelector(".js-search-form");
+      const searchContainer = document.querySelector(".js-search-container");
+      const searchClose = document.querySelector(".js-search-close");
 
+      function showSearchForm() {
+        search.classList.add("open");
+      }
 
-        function showSearchForm() {
-            search.classList.add('open');
-        }
+      function hideSearchForm() {
+        search.classList.remove("open");
+      }
 
-        function hideSearchForm() {
-            search.classList.remove('open');
-        }
-
-        for (const searchBtn of searchBtns) {
-            searchBtn.addEventListener('click', showSearchForm);
-        }
-
-        searchClose.addEventListener('click', hideSearchForm);
-        search.addEventListener('click', hideSearchForm);
-        searchContainer.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
+      for (const searchBtn of searchBtns) {
+        searchBtn.addEventListener("click", showSearchForm);
+      }
+      searchClose.addEventListener("click", hideSearchForm);
+      search.addEventListener("click", hideSearchForm);
+      searchContainer.addEventListener("click", showSearchForm);
     </script>
-
-
-</body>
-
+  </body>
 </html>
