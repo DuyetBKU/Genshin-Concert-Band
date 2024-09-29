@@ -95,6 +95,9 @@
         padding: 8px;
         font-size: 1.4rem;
     }
+    .nav_input_mobile:checked ~ .nav_overlay_mobile {
+        display: block;
+    }
 
     #nav {
         display: inline-block;
