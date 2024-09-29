@@ -68,7 +68,34 @@
         right: 0;
         left: 0;
     }
-    
+    .nav_bars-btn {
+        display: none;
+    }
+    .nav_overlay_mobile {
+        display: none;
+    }
+
+    .nav_overlay_mobile {
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        max-width: 100%;
+        background-color: #ccc;
+    }
+    .nav_mobile {
+        margin-top: 24px;
+    }
+    .nav_mobile li a {
+        text-decoration: none;
+        display: block;
+        color: #000;
+        padding: 8px;
+        font-size: 1.4rem;
+    }
+
     #nav {
         display: inline-block;
     }
@@ -147,6 +174,7 @@
     
     .search-container {
         float: right;
+        padding: 2px;
     }
     
     .form {
@@ -264,7 +292,11 @@
         /* padding: 16px; */
         font-size: 15px;
     }
-    
+        iframe {
+        width: 800px;
+        height: 498px;
+        overflow: hidden;
+      } 
     #content {}
     
     .content-section {
@@ -294,7 +326,12 @@
         text-align: justify;
         line-height: 150%;
     }
-    
+    iframe {
+        width: 800px;
+        height: 498px;
+    }
+            
+        
     #content .video {
         margin-top: 15px;
         left: 50%;
@@ -638,6 +675,8 @@
         color: rgb(41, 81, 131);
     }
     
+
+
     @keyframes runmodel {
         from {
             opacity: 0;
@@ -647,4 +686,66 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+/*---------------------------------------------------------
+ *-----------------------RESPONSIVE------------------------
+ *---------------------------------------------------------*/
+ 
+    @media only screen and (max-width: 46.1875em) {
+        .nav_pc {
+            display: none;
+        }
+        .nav_bars-btn {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            color: #fff;
+            padding: 8px;
+         
+        }
+        .ti-menu:before {
+            font-size: 30px;
+        }
+     
+       
+    
+        #content .member-items {
+            float: none;
+        }
+        .content-section {
+            width: 100%;
+            padding: 0 24px;
+        
+        }
+        :root {
+            --width: 100%;
+        }
+        iframe {
+            width: var(--width);
+            height: 200px;
+        }
+        .col-third {
+            width: 100%;
+        }
+        .place-img {
+            width: 80%;
+            height: auto;
+    
+            padding-top: 16px;
+            display: block;
+    }
+    @media only screen and (min-width: 46.5em) and (max-width: 63.9375em) {
+        p {
+            color: blue;
+           }
+      
+
+    }
+    
+    @media only screen and (min-width: 64em) {
+        p {
+            color: green;
+        }
+       
+
     }
