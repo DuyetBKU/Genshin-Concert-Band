@@ -7,6 +7,9 @@
     .text-white {
         color: #fff !important;
     }
+    :root {
+        --background-color: linear-gradient(to right,rgb(14, 22, 37) 0%, rgb(9, 24, 57),rgb(2, 2, 12) 100%);
+    }
     
     .row {
         margin-left: -8px;
@@ -60,45 +63,74 @@
     #main {}
     
     #header {
-        height: 46px;
-        background-color: #000;
+        height: 54px;
+        background-color: #000000c9;
         position: fixed;
-        z-index: 1;
+        z-index: 1; 
         top: 0;
         right: 0;
         left: 0;
+    }
+    
+    
+    .nav_pc {
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
     }
     .nav_bars-btn {
         display: none;
     }
     .nav_overlay_mobile {
         display: none;
+
     }
 
+
     .nav_overlay_mobile {
-        
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         width: 300px;
         max-width: 100%;
-        background-color: #ccc;
+        background-color: #000;
+        background-image: url('/assets/img/hoyoverse-logo-poster.png');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: bottom;
+        opacity: 0.9;
+        /* transform: translateX(-100%);
+        transition: transform linear 0.5s; */
     }
     .nav_mobile {
-        margin-top: 24px;
+        margin-top: 16px;
+       opacity: 0.9;
+      
     }
     .nav_mobile li a {
+       
         text-decoration: none;
         display: block;
-        color: #000;
-        padding: 8px;
+        color: #fff;
+        padding: 8px 24px ;
         font-size: 1.4rem;
     }
+ 
     .nav_input_mobile:checked ~ .nav_overlay_mobile {
         display: block;
+        /* transform: translateX(0); */
+        animation: fadeIn linear .5s;
+        /* opacity: 0.9; */
     }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }   
     #nav {
         display: inline-block;
     }
@@ -123,7 +155,7 @@
     
     #nav li a {
         text-decoration: none;
-        line-height: 46px;
+        line-height: 54px;
         padding: 0 24px;
         display: inline-block;
     }
@@ -156,7 +188,9 @@
     #nav .nav-arrow-down {
         font-size: 12px;
     }
-    
+    .search-btn {
+        transform: translateY(-46px);
+    }
     #header .search-btn:hover {
         background-color: #da0000;
     }
@@ -264,10 +298,14 @@
         padding: 21px;
         line-height: 46px;
     }
-    
-    #slider {
+    .slider1 {
         position: relative;
-        margin-top: 46px;
+        margin-top: 0;
+        height: 54px;
+        background-color: #0e151c;
+    }
+    .slider2 {
+        position: relative;
         padding-top: 50%;
         width: 100%;
         background: url('/assets/img/slider.jpg') top center / cover no-repeat;
@@ -336,7 +374,7 @@
             
         
     #content .video {
-        margin-top: 15px;
+        margin-top: 15px;nbvxc z
         left: 50%;
     }
     
@@ -352,6 +390,13 @@
     
     #content .member-items:hover {
         opacity: 0.6;
+        cursor: pointer;
+    }
+    .member-avatar {
+        transition: transform .6s ease; /* Thêm hiệu ứng chuyển đổi */
+    }
+    .member-avatar.clicked {
+        transform: scale(1.1);
     }
     
     #content .member-items .member-avatar {
@@ -359,12 +404,12 @@
         margin-top: 30px;
         margin-bottom: 10px;
         border-radius: 4px;
-        box-shadow: 10px 10px 10px rgba(101, 100, 100, 0.2);
+        box-shadow: 10px 10px 10px rgba(101, 100, 100, 0.2); 
     }
     /* Tour section */
     
     .tour-section {
-        background-color: #000;
+        background: var(--background-color);
     }
     
     .ticket-list li {
@@ -410,8 +455,585 @@
         height: 150px;
         padding-top: 16px;
         display: block;
+        background-size: cover; /* Đảm bảo hình nền được bao phủ */
+        background-position: center; /* Căn giữa hình nền */
+    }
+    .place-img.PicMondstadt {
+        animation: ChangePicMondstadt 50s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+    .place-img.PicLiyue {
+        animation: ChangePicLiyue 200s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+    .place-img.PicInazuma {
+        animation: ChangePicInazuma 90s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+    .place-img.PicSumeru {
+        animation: ChangePicSumeru 260s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+    .place-img.PicFontaine {
+        animation: ChangePicFontaine 185s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+    .place-img.PicNatlan {
+        animation: ChangePicNatlan 70s infinite;
+        /* transition: background-image 1s ease-in-out; */
+    }
+
+    
+    @keyframes ChangePicMondstadt {
+        0% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_The_City_of_Wind.png');
+        }
+        10% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_The_Marsh_of_Celestial_Guardians.png');
+        }
+        20% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Windswept_Wilderness.png');
+        }
+        30% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Land_of_Clear_Springs.png');
+        }
+        40% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Manor_of_Daybreak.png');
+        }
+        50% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Favonius_Cathedral.png');
+        }
+        60% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Knights_of_Favonius_-_Library.png');
+        }
+        70% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Ancient_Thousand_Winds_Temple.png');
+        }
+        80% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Forgotten_Sword_Cemetery.png');
+        }
+        90% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_Abandoned_Capital_of_Howling_Winds.png');
+        }
+        100% {
+            background-image: url('/assets/img/Mondstadt/Viewpoint_The_City_of_Wind.png');
+        }
     }
     
+    @keyframes ChangePicLiyue {
+        0% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Where_Merchants_Flock_And_All_Ships_Dock.png');
+        }
+        2.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Feiyun_Slope.png');
+        }
+        5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Chihu_Rock.png');
+        }
+        7.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Yujing_Terrace.png');
+        }
+        10% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Vigilant_Guardians_Vantage_Point.png');
+        }
+        12.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Marsh_of_Rustling_Reeds.png');
+        }
+        15% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Ruins_of_Guili.png');
+        }
+        17.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_A_Home_in_the_Hills.png');
+        }
+        20% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Where_Mountains_Peak_Beyond_the_Clouds.png');
+        }
+        22.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Moonlit_Tree.png');
+        }
+        25% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Mist-Veiled_Stone_Forest.png');
+        }
+        27.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Weeping_Garden.png');
+        }
+        30% {
+            background-image: url('/assets/img/Liyue/Viewpoint_A_Drop_in_the_Ocean.png');
+        }
+        32.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Beyond_the_Chasm.png');
+        }
+        35% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Dunyu_Ruins.png');
+        }
+        37.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Qingxu_Forsaken_Tower.png');
+        }
+        40% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Nine_Pillars_of_Peace.png');
+        }
+        42.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_View_from_The_Chasm_Surface.png');
+        }
+        45% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Mouth_of_the_Great_Mine.png');
+        }
+        47.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Ancient_Battlefield_of_Fuao_Vale.png');
+        }
+        50% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Underground_Mines.png');
+        }
+        52.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Blocked_Path.png');
+        }
+        55% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Underground_Waterway.png');
+        }
+        57.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Crystal_Fragment.png');
+        }
+        60% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Inverted_City.png');
+        }
+        62.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Great_Mushroom_Place.png');
+        }
+        65% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Court_of_Pillars.png');
+        }
+        67.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Jade_Elegy_of_Bishui.png');
+        }
+        70% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Clouds_Cascade_Around_the_Wharf.png');
+        }
+        72.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Valley_of_Vibrant_Butterflies.png');
+        }
+        75% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Herb-Housing_Hall.png');
+        }
+        77.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Clarion_Echo.png');
+        }
+        80% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Past_Glories_of_Wangshan.png');
+        }
+        82.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Clear_Skies_Over_Xuanlian.png');
+        }
+        85% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Desolate_Foothill_Shrines.png');
+        }
+        87.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Trails_of_Laixin.png');
+        }
+        90% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Chiwang_Peak.png');
+        }
+        92.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Ancient_Pact.png');
+        }
+        95% {
+            background-image: url('/assets/img/Liyue/Viewpoint_The_Blossoming_Warmth_of_Qiaoying_Sunlight.png');
+        }
+        97.5% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Bishui_Twilight_Luster.png');
+        }
+        100% {
+            background-image: url('/assets/img/Liyue/Viewpoint_Where_Merchants_Flock_And_All_Ships_Dock.png');
+        }
+    }
+    
+    @keyframes ChangePicInazuma {
+        0% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Ritou_Narukami_Island.png');
+        }
+        5.56% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Tenryou_Inazuma_City.png');
+        }
+        11.11% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Suburbs_Inazuma_City.png');
+        }
+        16.67% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_The_Sacred_Forest_in_the_Moonlight.png');
+        }
+        22.22% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Grand_Narukami_Shrine_Mt._Yougou.png');
+        }
+        27.78% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Tatara_Islands_Vantage_Point.png');
+        }
+        33.33% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Front_Line_Kannazuka.png');
+        }
+        38.89% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Tidal_Flat_Amidst_the_Flames_of_War.png');
+        }
+        44.44% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Rift_Valley_Yashiori_Island.png');
+        }
+        50% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Overlooking_Serpent_Head.png');
+        }
+        55.56% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_The_Silent_Fishing_Village.png');
+        }
+        61.11% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_The_Stranded_Flagship.png');
+        }
+        66.67% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Where_the_Provisional_Head_Priestess_Lives.png');
+        }
+        72.22% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Where_Swirling_Storm_Clouds_Gather.png');
+        }
+        77.78% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_The_Pearlescent_Palace.png');
+        }
+        83.33% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Village_of_the_People_of_the_Deep.png');
+        }
+        88.89% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_The_Moon-Bathed_Deep.png');
+        }
+        94.44% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Tsurumi_Island.png');
+        }
+        100% {
+            background-image: url('/assets/img/Inazuma/Viewpoint_Ritou_Narukami_Island.png');
+        }
+    }
+   
+    @keyframes ChangePicSumeru {
+        0% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png');
+        }
+        1.92% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_City_Above_the_Forest.png');
+        }
+        3.84% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Village_by_the_River.png');
+        }
+        5.76% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Harbor_Betwixt_the_Two_Trees.png');
+        }
+        7.68% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Memory_of_Alcazarzaray.png');
+        }
+        9.60% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Garden_of_Deep_Thought.png');
+        }
+        11.52% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Frontier_Beneath_the_High_Wall.png');
+        }
+        13.44% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Colossus_Watching_Devantaka.png');
+        }
+        15.36% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Varunastra.png');
+        }
+        17.28% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Rain_End.png');
+        }
+        19.20% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Land_of_Mawtiyima.png');
+        }
+        21.12% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Aranaga_Little_Garden.png');
+        }
+        23.04% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_World_of_the_Aranara.png');
+        }
+        24.96% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Nursery_of_Lost_Dreams.png');
+        }
+        26.88% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Littlest_Dream.png');
+        }
+        28.80% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Garden_New_Sprouts.png');
+        }
+        30.72% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Barren_Land_Where_Sand_Dances.png');
+        }
+        32.64% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Towers_of_Betrayal.png');
+        }
+        34.56% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Refugee_Shelters.png');
+        }
+        36.48% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Thamud_Oasis.png');
+        }
+        38.40% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Mausoleum_of_King_Deshret.png');
+        }
+        40.32% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Thousands_of_Entombed_Chambers.png');
+        }
+        42.24% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Khaj-Nisut.png');
+        }
+        44.16% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Bottomless_Hall.png');
+        }    
+        46.08% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Aaru_Shut.png');
+        }
+        48.00% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Giant_of_the_Wind-Eroded_Valley.png');
+        }
+        49.92% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Lifeless_Dar_al-Shifa.png');
+        }
+        51.84% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Verdant_Fields_Vantage_Point.png');
+        }
+        53.76% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Mt._Damavand_Where_Sandstorms_Never_Cease.png');
+        }
+        55.68% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Moonblue_Canals.png');
+        }
+        57.60% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Tanit_Encampment.png');
+        }
+        59.52% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Palace_Abandoned_by_the_Gods.png');
+        }
+        61.44% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Temple_of_Buried_Dominion.png');
+        }
+        63.36% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Wenut_Tunnels.png');
+        }
+        65.28% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Lost_Hermitage.png');
+        }
+        67.20% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Forgotten_River_Valley.png');
+        }
+        69.12% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Gap_of_the_Hidden_Ruins.png');
+        }
+        71.04% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Court_of_Dried_Springs.png');
+        }
+        72.96% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Court_of_Withered_Life.png');
+        }
+        74.88% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Where_a_Titan_Shins_Were_Broken.png');
+        }
+        76.80% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Safhe_Shatranj.png');
+        }
+        78.72% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Liloupar_Gaol.png');
+        }
+        80.64% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Remnants_of_the_Ancient_Orchard.png');
+        }
+        82.56% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Ad-Hoc_Headquarters_of_the_Fatui_Expeditionary_Force.png');
+        }
+        84.48% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_Paradise_of_Eternal_Peace.png');
+        }
+        86.40% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Elder_Pine_Atop_the_Wastes.png');
+        }
+        88.32% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Forge_of_the_Abandoned_Foundry.png');
+        }
+        90.24% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Gate_of_Everlasting_Mourning.png');
+        }
+        92.16% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Valley_of_the_Unsullied.png');
+        }
+        94.08% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Amrita-Nourished_Nest.png');
+        }
+        96.00% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Harvisptokhm.png');
+        }
+        97.92% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_Sourcewater_Nation.png');
+        }
+        100% {
+            background-image: url('/assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png');
+        }   
+    }
+    
+    @keyframes ChangePicFontaine {
+        0% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Depths.png');
+        }
+        2.70% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Deepest_Depths.png');
+        }
+        5.41% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Oratrice_Mecanique_d_Analyse_Cardinale.png');
+        }
+        8.11% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Foamy_Home.png');
+        }
+        10.81% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Ancient_Conch_Melody_of_Yore.png');
+        }
+        13.51% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Where_Dark_Tides_Echo.png');
+        }
+        16.22% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Sunken_Glory.png');
+        }
+        18.92% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Court_of_Dew_and_Springs.png');
+        }
+        21.62% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Land_of_Corroded_Shadows_and_Tainted_Currents.png');
+        }
+        24.32% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Seaworn_Cavern.png');
+        }
+        27.03% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Narzissenkreuz_Kingdom.png');
+        }
+        29.73% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Erinnyes_Whirling_Dance.png');
+        }
+        32.43% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Memories_of_Mont_Esus.png');
+        }
+        35.14% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_View_From_Mont_Automnequi.png');
+        }
+        37.84% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Fontaine_Hot_Springs.png');
+        }
+        40.54% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Morning_in_the_Beryl_Mountains_Clear_Weather.png');
+        }
+        43.24% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Seaside_Village.png');
+        }
+        45.94% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Graveyard_of_Ships.png');
+        }
+        48.65% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Remnants_of_Brilliant_Wisdom.png');
+        }
+        51.35% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Wreck_of_Shattered_Dreams.png');
+        }
+        54.05% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_A_Sea_of_Exile.png');
+        }
+        56.76% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Copper_Keep.png');
+        }
+        59.46% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Scattered_References.png');
+        }
+        62.16% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Erinnyes_Watery_Weeping_Willow.png');
+        }
+        64.86% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Drunkard_Ship.png');
+        }
+        67.57% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_A_Distant_Harbor.png');
+        }
+        70.27% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Tower_of_Gestalt.png');
+        }
+        73.00% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_World_Amniotic_Fluid.png');
+        }
+        75.68% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_Lovely_Legends_of_Petrichor.png');
+        }
+        75.68% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Stage_of_Faded_Gold.png');
+        }
+        81.08% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Secret_Locale_of_the_Ancient_Order.png');
+        }
+        83.78% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Slumbering_Eternal_City.png');
+        }
+        86.49% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Where_Only_the_Bell_Tolls.png');
+        }
+        89.19% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Gradus_ad_Capitolium.png');
+        }
+        91.89% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Domus_Requiem.png');
+        }
+        94.59% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Harmony_Shadow.png');
+        }
+        97.30% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_The_End_of_An_Ancient_Dream.png');
+        }
+        100% {
+            background-image: url('/assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Depths.png');
+        }
+    }
+    
+    @keyframes ChangePicNatlan {
+        0% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Land_of_Many_Echoes.png');
+        }
+        7.14% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Canopy_of_the_Clifftops.png');
+        }
+        14.28% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Home_of_Hot_Springs_and_Flowing_Waters.png');
+        }
+        21.42% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Arena_of_Glory_and_Triumph.png');
+        }
+        28.56% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Pins_of_Rock_Entwined_With_Golden_Runes.png');
+        }
+        35.70% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Stone_Chamber_of_Shifting_Crystal_Pillars.png');
+        }
+        42.84% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Plane_of_Pure_Desolation.png');
+        }
+        50% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Temple_of_Ancient_Forebears.png');
+        }
+        57.14% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Mother_Tree_of_Fruitful_Plenty.png');
+        }
+        64.28% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Where_the_Painted_Realm_Unfolds.png');
+        }
+        71.42% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Venture_to_a_Secret_Isle.png');
+        }
+        78.56% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Mural_of_Sworn_Pledges.png');
+        }
+        85.70% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Trial_Grounds_of_Restive_Nightsouls.png');
+        }
+        92.84% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Among_the_Painted_Peaks.png');
+        }
+        100% {
+            background-image: url('/assets/img/Natlan/Viewpoint_Land_of_Many_Echoes.png');
+        }
+    }
+    
+ 
     .place-img:hover {
         opacity: 0.6;
     }
@@ -419,7 +1041,7 @@
     .place-body {
         background-color: #fff;
         text-align: left;
-        padding-left: 16px;
+        padding-left: 8px;
         padding-top: 12px;
         font-size: 15px;
     }
@@ -638,8 +1260,18 @@
         /* border: 3px solid #333; */
         text-align: center;
     }
-    
-    .footer.content-section {}
+   
+    .content-extras {
+        background: linear-gradient(to right,rgb(14, 22, 37) 0%, rgb(9, 24, 57),rgb(2, 2, 12) 100%);
+        
+    }
+    .justified-image-grid.jig-c6d54eaabf921ab5a5d1ec904480d55d.jig-preset-global.jig-no-touch {
+        display: ruby;
+    }
+
+    .footer-section {
+        background-color: #000;
+    }
     
     .footer-link a {
         color: #ccc;
@@ -698,6 +1330,10 @@
         .nav_pc {
             display: none;
         }
+        >#header {
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+        }
         .nav_bars-btn {
             width: 48px;
             height: 48px;
@@ -715,6 +1351,10 @@
         #content .member-items {
             float: none;
         }
+        p.member-name {
+            text-align: center;
+            inline-size: max-content;
+        }
         .content-section {
             width: 100%;
             padding: 0 24px;
@@ -731,24 +1371,26 @@
             width: 100%;
         }
         .place-img {
-            width: 80%;
             height: auto;
-    
+
             padding-top: 16px;
             display: block;
+        }
+        .place-desc {
+            padding: 8px 12px 0 0;
+        
+        }
+
+        table.content-section {
+            width: 90%;
+        }
     }
     @media only screen and (min-width: 46.5em) and (max-width: 63.9375em) {
-        p {
-            color: blue;
-           }
       
 
     }
     
     @media only screen and (min-width: 64em) {
-        p {
-            color: green;
-        }
-       
+        
 
     }
