@@ -7,363 +7,363 @@
     <title>Genshin Band Concert</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" sizes="64x64" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/Genshin_Concert_Band/assets/css/style.css">
     <link rel="stylesheet"
-        href="assets/font/themify-icons-font/themify-icons/themify-icons.css" />
+        href="/Genshin_Concert_Band/assets/font/themify-icons-font/themify-icons/themify-icons.css" />
 
     <!--Phần tải trước-->
     <div>
         <link rel="preload" href="https://www.youtube.com/embed/3NbIcIJU2co" as="video">
-        <link rel="preload" href="assets/img/hoyoverse-logo-poster.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/hoyoverse-logo-poster.png" as="image" />
 
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_The_City_of_Wind.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_The_City_of_Wind.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Mondstadt/Viewpoint_The_Marsh_of_Celestial_Guardians.png"
+            href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_The_Marsh_of_Celestial_Guardians.png"
             as="image" />
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_Windswept_Wilderness.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Windswept_Wilderness.png"
             as="image" />
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_Land_of_Clear_Springs.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Land_of_Clear_Springs.png"
             as="image" />
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_Manor_of_Daybreak.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Manor_of_Daybreak.png"
             as="image" />
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_Favonius_Cathedral.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Mondstadt/Viewpoint_Knights_of_Favonius_-_Library.png" as="image" />
-        <link rel="preload"
-            href="assets/img/Mondstadt/Viewpoint_Ancient_Thousand_Winds_Temple.png" as="image" />
-        <link rel="preload" href="assets/img/Mondstadt/Viewpoint_Forgotten_Sword_Cemetery.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Favonius_Cathedral.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Mondstadt/Viewpoint_Abandoned_Capital_of_Howling_Winds.png"
-            as="image" />
-
+            href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Knights_of_Favonius_-_Library.png" as="image" />
         <link rel="preload"
-            href="assets/img/Liyue/Viewpoint_Where_Merchants_Flock_And_All_Ships_Dock.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Feiyun_Slope.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Chihu_Rock.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Yujing_Terrace.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Vigilant_Guardians_Vantage_Point.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Marsh_of_Rustling_Reeds.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Ruins_of_Guili.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_A_Home_in_the_Hills.png"
+            href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Ancient_Thousand_Winds_Temple.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Forgotten_Sword_Cemetery.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Liyue/Viewpoint_Where_Mountains_Peak_Beyond_the_Clouds.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Moonlit_Tree.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Mist-Veiled_Stone_Forest.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Weeping_Garden.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_A_Drop_in_the_Ocean.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Beyond_the_Chasm.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Dunyu_Ruins.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Qingxu_Forsaken_Tower.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Nine_Pillars_of_Peace.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_View_from_The_Chasm_Surface.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Mouth_of_the_Great_Mine.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Liyue/Viewpoint_The_Ancient_Battlefield_of_Fuao_Vale.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_The_Underground_Mines.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_The_Blocked_Path.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Underground_Waterway.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Crystal_Fragment.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_The_Inverted_City.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_The_Great_Mushroom_Place.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_The_Court_of_Pillars.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Jade_Elegy_of_Bishui.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Liyue/Viewpoint_The_Clouds_Cascade_Around_the_Wharf.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Valley_of_Vibrant_Butterflies.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Herb-Housing_Hall.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Clarion_Echo.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Past_Glories_of_Wangshan.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Clear_Skies_Over_Xuanlian.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Desolate_Foothill_Shrines.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Trails_of_Laixin.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Chiwang_Peak.png" as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Ancient_Pact.png" as="image" />
-        <link rel="preload"
-            href="assets/img/Liyue/Viewpoint_The_Blossoming_Warmth_of_Qiaoying_Sunlight.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Liyue/Viewpoint_Bishui_Twilight_Luster.png"
+            href="/Genshin_Concert_Band/assets/img/Mondstadt/Viewpoint_Abandoned_Capital_of_Howling_Winds.png"
             as="image" />
 
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Ritou_Narukami_Island.png"
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Where_Merchants_Flock_And_All_Ships_Dock.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Tenryou_Inazuma_City.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Feiyun_Slope.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Chihu_Rock.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Yujing_Terrace.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Vigilant_Guardians_Vantage_Point.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Suburbs_Inazuma_City.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Marsh_of_Rustling_Reeds.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Ruins_of_Guili.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_A_Home_in_the_Hills.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_The_Sacred_Forest_in_the_Moonlight.png"
+            href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Where_Mountains_Peak_Beyond_the_Clouds.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Moonlit_Tree.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Mist-Veiled_Stone_Forest.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Weeping_Garden.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_A_Drop_in_the_Ocean.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Beyond_the_Chasm.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Dunyu_Ruins.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Qingxu_Forsaken_Tower.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Nine_Pillars_of_Peace.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_View_from_The_Chasm_Surface.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Mouth_of_the_Great_Mine.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_Grand_Narukami_Shrine_Mt._Yougou.png" as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Tatara_Islands_Vantage_Point.png"
+            href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Ancient_Battlefield_of_Fuao_Vale.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Front_Line_Kannazuka.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Underground_Mines.png"
             as="image" />
-        <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_Tidal_Flat_Amidst_the_Flames_of_War.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Blocked_Path.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Underground_Waterway.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Rift_Valley_Yashiori_Island.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Crystal_Fragment.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Inverted_City.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Great_Mushroom_Place.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Overlooking_Serpent_Head.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Court_of_Pillars.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_The_Silent_Fishing_Village.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_The_Stranded_Flagship.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_Where_the_Provisional_Head_Priestess_Lives.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Jade_Elegy_of_Bishui.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_Where_Swirling_Storm_Clouds_Gather.png"
+            href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Clouds_Cascade_Around_the_Wharf.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_The_Pearlescent_Palace.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Valley_of_Vibrant_Butterflies.png"
             as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Herb-Housing_Hall.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Clarion_Echo.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Past_Glories_of_Wangshan.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Clear_Skies_Over_Xuanlian.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Desolate_Foothill_Shrines.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Trails_of_Laixin.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Chiwang_Peak.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Ancient_Pact.png" as="image" />
         <link rel="preload"
-            href="assets/img/Inazuma/Viewpoint_Village_of_the_People_of_the_Deep.png"
+            href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_The_Blossoming_Warmth_of_Qiaoying_Sunlight.png"
             as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_The_Moon-Bathed_Deep.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Inazuma/Viewpoint_Tsurumi_Island.png" as="image" />
-
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_City_Above_the_Forest.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Village_by_the_River.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Harbor_Betwixt_the_Two_Trees.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Memory_of_Alcazarzaray.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Garden_of_Deep_Thought.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Frontier_Beneath_the_High_Wall.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Colossus_Watching_Devantaka.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Varunastra.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Rain_End.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Land_of_Mawtiyima.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Aranaga_Little_Garden.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_World_of_the_Aranara.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Nursery_of_Lost_Dreams.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Littlest_Dream.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Garden_New_Sprouts.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Barren_Land_Where_Sand_Dances.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Towers_of_Betrayal.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Refugee_Shelters.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Thamud_Oasis.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Mausoleum_of_King_Deshret.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Thousands_of_Entombed_Chambers.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Khaj-Nisut.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Bottomless_Hall.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Aaru_Shut.png" as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Giant_of_the_Wind-Eroded_Valley.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Lifeless_Dar_al-Shifa.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Verdant_Fields_Vantage_Point.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_Mt._Damavand_Where_Sandstorms_Never_Cease.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Moonblue_Canals.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Tanit_Encampment.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_Palace_Abandoned_by_the_Gods.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Temple_of_Buried_Dominion.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Wenut_Tunnels.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Lost_Hermitage.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Forgotten_River_Valley.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Gap_of_the_Hidden_Ruins.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Court_of_Dried_Springs.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Court_of_Withered_Life.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Where_a_Titan_Shins_Were_Broken.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Safhe_Shatranj.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Liloupar_Gaol.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Remnants_of_the_Ancient_Orchard.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_Ad-Hoc_Headquarters_of_the_Fatui_Expeditionary_Force.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_The_Paradise_of_Eternal_Peace.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Elder_Pine_Atop_the_Wastes.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Forge_of_the_Abandoned_Foundry.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Gate_of_Everlasting_Mourning.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Valley_of_the_Unsullied.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Amrita-Nourished_Nest.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Harvisptokhm.png" as="image" />
-        <link rel="preload" href="assets/img/Sumeru/Viewpoint_Sourcewater_Nation.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png" as="image" />
-
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Depths.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Deepest_Depths.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Oratrice_Mecanique_d_Analyse_Cardinale.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Foamy_Home.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Ancient_Conch_Melody_of_Yore.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Where_Dark_Tides_Echo.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Sunken_Glory.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Court_of_Dew_and_Springs.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Land_of_Corroded_Shadows_and_Tainted_Currents.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Seaworn_Cavern.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Narzissenkreuz_Kingdom.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Erinnyes_Whirling_Dance.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Memories_of_Mont_Esus.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_View_From_Mont_Automnequi.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Fontaine_Hot_Springs.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Morning_in_the_Beryl_Mountains_Clear_Weather.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_Seaside_Village.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Graveyard_of_Ships.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_The_Remnants_of_Brilliant_Wisdom.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_Wreck_of_Shattered_Dreams.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_A_Sea_of_Exile.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_Copper_Keep.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Scattered_References.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Erinnyes_Watery_Weeping_Willow.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_Drunkard_Ship.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_A_Distant_Harbor.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Tower_of_Gestalt.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_World_Amniotic_Fluid.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_The_Lovely_Legends_of_Petrichor.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Stage_of_Faded_Gold.png"
-            as="image" />
-        <link rel="preload"
-            href="assets/img/Fontaine/Viewpoint_Secret_Locale_of_the_Ancient_Order.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Slumbering_Eternal_City.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Where_Only_the_Bell_Tolls.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Gradus_ad_Capitolium.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Domus_Requiem.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_Harmony_Shadow.png" as="image" />
-        <link rel="preload" href="assets/img/Fontaine/Viewpoint_The_End_of_An_Ancient_Dream.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Liyue/Viewpoint_Bishui_Twilight_Luster.png"
             as="image" />
 
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Land_of_Many_Echoes.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Ritou_Narukami_Island.png"
             as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Canopy_of_the_Clifftops.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Tenryou_Inazuma_City.png"
             as="image" />
-        <link rel="preload"
-            href="assets/img/Natlan/Viewpoint_Home_of_Hot_Springs_and_Flowing_Waters.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Arena_of_Glory_and_Triumph.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Suburbs_Inazuma_City.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Natlan/Viewpoint_Pins_of_Rock_Entwined_With_Golden_Runes.png"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_The_Sacred_Forest_in_the_Moonlight.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Natlan/Viewpoint_Stone_Chamber_of_Shifting_Crystal_Pillars.png"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Grand_Narukami_Shrine_Mt._Yougou.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Tatara_Islands_Vantage_Point.png"
             as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Plane_of_Pure_Desolation.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Temple_of_Ancient_Forebears.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Mother_Tree_of_Fruitful_Plenty.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Where_the_Painted_Realm_Unfolds.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Venture_to_a_Secret_Isle.png"
-            as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Mural_of_Sworn_Pledges.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Front_Line_Kannazuka.png"
             as="image" />
         <link rel="preload"
-            href="assets/img/Natlan/Viewpoint_Trial_Grounds_of_Restive_Nightsouls.png"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Tidal_Flat_Amidst_the_Flames_of_War.png"
             as="image" />
-        <link rel="preload" href="assets/img/Natlan/Viewpoint_Among_the_Painted_Peaks.png"
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Rift_Valley_Yashiori_Island.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Overlooking_Serpent_Head.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_The_Silent_Fishing_Village.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_The_Stranded_Flagship.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Where_the_Provisional_Head_Priestess_Lives.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Where_Swirling_Storm_Clouds_Gather.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_The_Pearlescent_Palace.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Village_of_the_People_of_the_Deep.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_The_Moon-Bathed_Deep.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Inazuma/Viewpoint_Tsurumi_Island.png" as="image" />
+
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_City_Above_the_Forest.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Village_by_the_River.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Harbor_Betwixt_the_Two_Trees.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Memory_of_Alcazarzaray.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Garden_of_Deep_Thought.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Frontier_Beneath_the_High_Wall.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Colossus_Watching_Devantaka.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Varunastra.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Rain_End.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Land_of_Mawtiyima.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Aranaga_Little_Garden.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_World_of_the_Aranara.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Nursery_of_Lost_Dreams.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Littlest_Dream.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Garden_New_Sprouts.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Barren_Land_Where_Sand_Dances.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Towers_of_Betrayal.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Refugee_Shelters.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Thamud_Oasis.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Mausoleum_of_King_Deshret.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Thousands_of_Entombed_Chambers.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Khaj-Nisut.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Bottomless_Hall.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Aaru_Shut.png" as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Giant_of_the_Wind-Eroded_Valley.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Lifeless_Dar_al-Shifa.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Verdant_Fields_Vantage_Point.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Mt._Damavand_Where_Sandstorms_Never_Cease.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Moonblue_Canals.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Tanit_Encampment.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Palace_Abandoned_by_the_Gods.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Temple_of_Buried_Dominion.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Wenut_Tunnels.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Lost_Hermitage.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Forgotten_River_Valley.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Gap_of_the_Hidden_Ruins.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Court_of_Dried_Springs.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Court_of_Withered_Life.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Where_a_Titan_Shins_Were_Broken.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Safhe_Shatranj.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Liloupar_Gaol.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Remnants_of_the_Ancient_Orchard.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Ad-Hoc_Headquarters_of_the_Fatui_Expeditionary_Force.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_Paradise_of_Eternal_Peace.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Elder_Pine_Atop_the_Wastes.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Forge_of_the_Abandoned_Foundry.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Gate_of_Everlasting_Mourning.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Valley_of_the_Unsullied.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Amrita-Nourished_Nest.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Harvisptokhm.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_Sourcewater_Nation.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Sumeru/Viewpoint_The_City_Where_All_Wisdom_Resides.png" as="image" />
+
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Depths.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Scenery_Within_Elynas_Deepest_Depths.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Oratrice_Mecanique_d_Analyse_Cardinale.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Foamy_Home.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Ancient_Conch_Melody_of_Yore.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Where_Dark_Tides_Echo.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Sunken_Glory.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Court_of_Dew_and_Springs.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Land_of_Corroded_Shadows_and_Tainted_Currents.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Seaworn_Cavern.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Narzissenkreuz_Kingdom.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Erinnyes_Whirling_Dance.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Memories_of_Mont_Esus.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_View_From_Mont_Automnequi.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Fontaine_Hot_Springs.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Morning_in_the_Beryl_Mountains_Clear_Weather.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Seaside_Village.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Graveyard_of_Ships.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Remnants_of_Brilliant_Wisdom.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Wreck_of_Shattered_Dreams.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_A_Sea_of_Exile.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Copper_Keep.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Scattered_References.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Erinnyes_Watery_Weeping_Willow.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Drunkard_Ship.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_A_Distant_Harbor.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Tower_of_Gestalt.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_World_Amniotic_Fluid.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_Lovely_Legends_of_Petrichor.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Stage_of_Faded_Gold.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Secret_Locale_of_the_Ancient_Order.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Slumbering_Eternal_City.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Where_Only_the_Bell_Tolls.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Gradus_ad_Capitolium.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Domus_Requiem.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_Harmony_Shadow.png" as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Fontaine/Viewpoint_The_End_of_An_Ancient_Dream.png"
+            as="image" />
+
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Land_of_Many_Echoes.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Canopy_of_the_Clifftops.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Home_of_Hot_Springs_and_Flowing_Waters.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Arena_of_Glory_and_Triumph.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Pins_of_Rock_Entwined_With_Golden_Runes.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Stone_Chamber_of_Shifting_Crystal_Pillars.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Plane_of_Pure_Desolation.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Temple_of_Ancient_Forebears.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Mother_Tree_of_Fruitful_Plenty.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Where_the_Painted_Realm_Unfolds.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Venture_to_a_Secret_Isle.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Mural_of_Sworn_Pledges.png"
+            as="image" />
+        <link rel="preload"
+            href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Trial_Grounds_of_Restive_Nightsouls.png"
+            as="image" />
+        <link rel="preload" href="/Genshin_Concert_Band/assets/img/Natlan/Viewpoint_Among_the_Painted_Peaks.png"
             as="image" />
         <div>
 
 </head>
 
 <body>
-    <script src="assets/css/volume-character.js"></script>
+    <script src="/Genshin_Concert_Band/assets/css/volume-character.js"></script>
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.jpg"s/1.3.0/respond.jpg"s"></script>
     <![endif]-->
@@ -493,42 +493,42 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
                 <div class="member-lists">
                     <div class="member-items">
                         <audio id="myAudio"></audio>
-                        <img src="assets/img/Tour/Yun_Jin.png" alt="Yunjin" class="member-avatar"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Yun_Jin.png" alt="Yunjin" class="member-avatar"
                             onclick="playNextAudio(1)" />
                         <p class="member-name">
                             Drummer, Yun Jin <i class="ti-volume"></i>
                         </p>
                     </div>
                     <div class="member-items">
-                        <img src="assets/img/Tour/Barbara.png" alt="Barbara" class="member-avatar"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Barbara.png" alt="Barbara" class="member-avatar"
                             onclick="playNextAudio(2)" />
                         <p class="member-name">
                             Vocalist, Barbara <i class="ti-volume"></i>
                         </p>
                     </div>
                     <div class="member-items">
-                        <img src="assets/img/Tour/Xinyan.png" alt="Xinyan" class="member-avatar"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Xinyan.png" alt="Xinyan" class="member-avatar"
                             onclick="playNextAudio(3)" />
                         <p class="member-name">
                             Bassist, Xinyan <i class="ti-volume"></i>
                         </p>
                     </div>
                     <div class="member-items">
-                        <img src="assets/img/Tour/Kaedehara_Kazuha.png" alt="Kaedehara Kazuha"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Kaedehara_Kazuha.png" alt="Kaedehara Kazuha"
                             class="member-avatar" onclick="playNextAudio(4)" />
                         <p class="member-name">
                             Guitarist, Kaedahara Kazuha <i class="ti-volume"></i>
                         </p>
                     </div>
                     <div class="member-items">
-                        <img src="assets/img/Tour/Yae_Miko.png" alt="Yae Miko"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Yae_Miko.png" alt="Yae Miko"
                             class="member-avatar" onclick="playNextAudio(5)" />
                         <p class="member-name">
                             Flutist, Yae Miko <i class="ti-volume"></i>
                         </p>
                     </div>
                     <div class="member-items">
-                        <img src="assets/img/Tour/Shenhe.png" alt="Shenhe" class="member-avatar"
+                        <img src="/Genshin_Concert_Band/assets/img/Tour/Shenhe.png" alt="Shenhe" class="member-avatar"
                             onclick="playNextAudio(6)" />
                         <p class="member-name">
                             Keyboardist, Shenhe <i class="ti-volume"></i>
@@ -686,7 +686,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
 
 
             <div id="merchandise" class="merchandise-section">
-                <img src="assets/img/merchandise.jpg" alt="Merchandise-Genshin_Event" />
+                <img src="/Genshin_Concert_Band/assets/img/merchandise.jpg" alt="Merchandise-Genshin_Event" />
                 <table class="content-section">
                     <tbody>
                         <tr>
@@ -785,7 +785,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
                                 learn more about the illustrator herself!
                             </p>
                             <figure>
-                                <img src="assets/img/Fan-Art/1.jpg" alt="" class="thumbnail" />
+                                <img src="/Genshin_Concert_Band/assets/img/Fan-Art/1.jpg" alt="" class="thumbnail" />
                                 <figurecaption>Lumine-Paimon</figurecaption>
                             </figure>
                         </article>
@@ -795,7 +795,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
                                 been working as an illustrator since then.
                             </p>
                             <figure>
-                                <img src="assets/img/Fan-Art/2.jpg" alt="" class="thumbnail" />
+                                <img src="/Genshin_Concert_Band/assets/img/Fan-Art/2.jpg" alt="" class="thumbnail" />
                                 <figurecaption>Ganyu</figurecaption>
                             </figure>
                         </article>
@@ -817,7 +817,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
                                 Genshin Impact and why.
                             </p>
                             <figure>
-                                <img src="assets/img/Fan-Art/5.jpg" alt="" class="thumbnail" />
+                                <img src="/Genshin_Concert_Band/assets/img/Fan-Art/5.jpg" alt="" class="thumbnail" />
                                 <figurecaption>Kequing</figurecaption>
                             </figure>
                             <p>
@@ -1145,7 +1145,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
             </div>
         </div>
         <!----------------------Starting PHP code----------------------------------->
-        <!-- <?php
+        <?php
         require './vendor/autoload.php';
 
         use PHPMailer\PHPMailer\PHPMailer;
@@ -1267,7 +1267,7 @@ Wallpapers: Bộ hình nền chất lượng cao từ Genshin Impact mà ngườ
             }
         }
         // }
-        ?> -->
+        ?>
 
         <!----------------------Ending PHP code----------------------------------->
 
